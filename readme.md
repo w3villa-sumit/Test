@@ -1,48 +1,37 @@
-Simple Arithmetic Unit Testing Demo
-This project demonstrates clean, effective unit testing for basic arithmetic operations — add() and subtract() — using Python's built-in unittest framework.
+This project demonstrates simple unit testing for add() and subtract() functions using Python’s built-in unittest framework.
 
-Project Structure
-text
-calculator.py        # Core logic (add & subtract functions)
-test_calculator.py   # Comprehensive unit tests
+ Project Structure
+calculator.py          # Core logic
+test_calculator.py     # Unit tests
+
 Setup & Run
-Clone or copy the project files
 
-Ensure you have Python 3.6+ installed
+Clone or copy the project.
 
-Run the tests:
+Run the tests using:
 
-bash
-python -m unittest test_calculator.py -v
-Note: The -v flag enables verbose output to see each test result clearly.
+python -m unittest test_calculator.py
 
 Tests Covered
-add(a, b)
-Handles positive, negative, and zero values
 
-Supports large integers (10¹⁸) and floating-point numbers
+add()
 
-Raises TypeError for invalid inputs:
+Handles positive, negative, and float values.
 
-Strings ("3")
+Raises TypeError for invalid inputs (e.g., strings, None).
 
-None values
+subtract()
 
-Mixed types (int + str)
+Handles normal and edge cases.
 
-➖ subtract(a, b)
-Covers normal, zero, and negative scenarios
+Validates input types.
 
-Validates large number cancellation and extreme differences
+Why Unit Tests Matter
 
-Enforces input validation with TypeError on invalid types
+Skipping tests can cause:
 
-Ques:-Why Unit Tests Matter?
-Answer:-
-Risk of Skipping Tests	Consequence
-Undetected Bugs	Logic errors (e.g., off-by-one) go unnoticed until production
-Regression Issues	Future changes silently break working code
-Slower Debugging	Bugs found late cost 10x more to fix
-Security Vulnerabilities	Unchecked edge cases can lead to exploits (e.g., overflow)
-Loss of Confidence	Harder to refactor, scale, or deploy reliably
-Unit tests = safety net for your code
+Undetected logic or validation bugs.
+
+Unexpected failures after future code changes.
+
+Loss of confidence in refactoring and deployment.
